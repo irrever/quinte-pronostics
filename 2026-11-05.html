@@ -104,6 +104,23 @@ details li{margin-bottom:6px}
   <p class="note"><strong>Validation</strong> : le modèle a été choisi sur 20 quintés passés et testé sur 10 autres. Sur ces 10 courses, sa log-loss sur le gagnant est de 2,17, contre 2,62 pour un tirage au hasard. C'est mieux que le hasard, mais le petit nombre de courses limite la confiance. <strong>Ce qu'il ne prend pas en compte</strong> : la taille du peloton, le déferrage, le changement de driver, l'avis de l'entraîneur et le classement ELO de Turfin, faute de les avoir validés.</p>
 </section>
 
+<section class="card accent-bleu wrap">
+  <div class="label">Précision</div>
+  <h2>Ce qui compte, ce qui est affiché, ce qui a été testé</h2>
+  <table>
+    <thead><tr><th>Critère</th><th>Statut dans la note</th><th>Résultat du test (log-loss, plus bas = mieux)</th></tr></thead>
+    <tbody>
+      <tr><td>Notes Equidia : aptitude à la distance, forme, chronos, tandem, conditions, bruits</td><td><span class="tag ok">Pris en compte</span></td><td>2,17 (hasard : 2,62)</td></tr>
+      <tr><td>Distance du jour</td><td><span class="tag ok">Via l'aptitude à la distance</span></td><td>Inclus dans les notes</td></tr>
+      <tr><td>Corde (plat, obstacle)</td><td><span class="tag info">Affiché seulement</span></td><td>2,18 (pire) si ajoutée au calcul</td></tr>
+      <tr><td>Poids (plat, obstacle)</td><td><span class="tag info">Affiché seulement</span></td><td>2,19 (pire) si ajouté au calcul</td></tr>
+      <tr><td>Déferrage, avis de l'entraîneur, classement ELO</td><td><span class="tag info">Affiché seulement</span></td><td>Pas de données historiques pour les tester</td></tr>
+      <tr><td>Cotes</td><td><span class="tag ko">Jamais utilisées</span></td><td>Exclues par principe</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Les notes ont été validées sur 30 quintés passés, dont 12 de plat ou d'obstacle. Au trot, le poids n'existe pas, donc il n'est pas affiché.</p>
+</section>
+
 <section class="card accent-violet">
   <div class="label">Combinaisons</div>
   <h2>Tiercé, quarté et quinté en box</h2>
