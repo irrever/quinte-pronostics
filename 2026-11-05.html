@@ -14,13 +14,13 @@
   --vert:#8cc7a6;--vert-bg:#15261d;--violet:#b3bccd;--violet-bg:#1d2431;
   --rouge:#e3948d;--rouge-bg:#33201e;--gris:#9aa4b4;--gris-bg:#1d2431;}}
 :root[data-theme="dark"]{
-  --bg:#121315;--surface:#1a1c1f;--line:#2c2f34;--text:#eceeF1;--muted:#9ca1a9;
-  --or:#a9bdd3;--or-bg:#1e2530;--bleu:#a9bdd3;--bleu-bg:#1e2530;
-  --vert:#a9bdd3;--vert-bg:#1e2530;--violet:#a9bdd3;--violet-bg:#1e2530;
-  --rouge:#d99a94;--rouge-bg:#2e1f1e;--gris:#9ca1a9;--gris-bg:#22252a;}
+  --bg:#0f1319;--surface:#161b23;--line:#262c36;--text:#e7eaf0;--muted:#8d96a6;
+  --or:#9db4d3;--or-bg:#1c2633;--bleu:#9db4d3;--bleu-bg:#1c2633;
+  --vert:#7fb89a;--vert-bg:#1c2633;--violet:#9db4d3;--violet-bg:#1c2633;
+  --rouge:#d99a94;--rouge-bg:#2e1f1e;--gris:#8d96a6;--gris-bg:#1a2029;}
 body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;
   padding:0 max(16px,env(safe-area-inset-right,0px)) 40px max(16px,env(safe-area-inset-left,0px))}
-main{max-width:960px;margin:0 auto;padding-top:20px}
+main{max-width:1120px;margin:0 auto;padding-top:20px}
 .hero{background:var(--surface);color:var(--text);border-radius:8px;padding:20px 22px;margin-bottom:14px;border:1px solid var(--line);border-left:3px solid var(--bleu)}
 .hero h1{font-size:22px;margin:0 0 6px}
 .hero p{margin:0;opacity:.92}
@@ -73,6 +73,16 @@ details li{margin-bottom:6px}
 .rec .bloc.reco{border:1px solid var(--bleu);background:var(--bleu-bg)}
 .rec .gros{font-size:22px;font-weight:800}
 .foot{color:var(--muted);font-size:12px;margin-top:8px}
+
+.layout{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:200px minmax(0,1fr);gap:24px;padding-top:20px}
+nav.side{position:sticky;top:12px;align-self:start}
+nav.side .grp{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:14px 10px 4px}
+nav.side .grp:first-child{margin-top:0}
+nav.side a{display:block;color:var(--muted);text-decoration:none;font-size:14px;padding:7px 10px;border-left:2px solid transparent}
+nav.side a:hover,nav.side a:focus-visible{color:var(--text);border-left-color:var(--bleu)}
+@media (max-width:820px){.layout{grid-template-columns:minmax(0,1fr)}.contenu{min-width:0}nav.side{position:static;display:flex;flex-wrap:wrap;gap:4px;min-width:0}nav.side .grp{display:none}nav.side a{border-left:0;border-bottom:2px solid transparent;padding:6px 8px}}
+section{scroll-margin-top:16px}
+
 .profil{padding-left:22px;margin:0}.profil li{margin-bottom:10px}
 </style></head><body><main>
 
@@ -81,8 +91,7 @@ details li{margin-bottom:6px}
   <h2>Ordre d'arrivée probable</h2>
   <div class="ordre"><span class='pastille r1'>6</span><span class='pastille r2'>4</span><span class='pastille '>5</span><span class='pastille '>9</span><span class='pastille '>12</span></div>
   <p class="note">Le favori du modèle est <strong>n°6 HUMANITY PELLINI</strong> : 15.7 % de chances de gagner, 42.4 % dans les trois premiers. Les chevaux 2 à 5 sont proches : la course reste ouverte.</p>
-</section>
-<nav class="zones" aria-label="Zones"><a href="#zone-1">1 · Quinté+</a><a href="#zone-2-1">2.1 · Tiercé, quarté et quinté</a><a href="#zone-3">3 · Couplés, simples placés et t</a><a href="#zone-4">4 · Distinction du gagnant et du</a><a href="#zone-5">5 · Chevaux et probabilités</a><a href="#zone-6">6 · Profil de la course et diffi</a><a href="#zone-7">7 · Analyse détaillée par cheval</a><a href="#zone-8-1">8.1 · Méthode</a><a href="#zone-9">9 · Statistiques des chevaux</a></nav>
+</section><div class="layout"><nav class="side" aria-label="Sections"><div class="grp">Pronostic</div><a href="#zone-1">Quinté+</a><a href="#zone-2-1">Tiercé, quarté, quinté</a><a href="#zone-3">Couplés et simples</a><a href="#zone-4">Distinction top 5</a><div class="grp">Analyse</div><a href="#zone-5">Chevaux</a><a href="#zone-6">Profil de course</a><a href="#zone-7">Détail par cheval</a><div class="grp">Suivi</div><a href="#zone-8-1">Méthode</a><a href="#zone-9">Statistiques</a></nav><div class="contenu">
 <section id="zone-2-1" class="card accent-bleu">
   <div class="label">2.1 · Tiercé, quarté et quinté</div>
   <div class="jeu-titre">Simple placé n°6</div>
@@ -123,7 +132,7 @@ details li{margin-bottom:6px}
   <div class="label">6 · Profil de la course et difficultés</div>
   <h2>Profil de la course et difficultés</h2>
   <p class="note">Ces éléments sont propres à cette course. « Mesuré » vient des données du jour ; « contexte » est une information de référence, non intégrée au calcul.</p>
-  <ol class='profil'><li><strong>Type de course</strong> : Attelé, 2100 m (distance intermédiaire). <span class='tag ok'>mesuré</span></li><li><strong>Taille du peloton</strong> : 17 partants : grand peloton. Contexte Turfin : le favori gagne 44 % en peloton de 8 ou moins, 20 % à 16 partants et plus. <span class='tag info'>contexte</span></li><li><strong>Poids</strong> : Pas de poids au trot : le handicap ne joue pas dans cette course. <span class='tag ok'>mesuré</span></li><li><strong>Météo et terrain</strong> : Pluie : 0.9 mm sur 7 jours, 0.3 mm sur 48 h, 0.0 mm prévus le jour de la course. Vent max : 10.2 km/h. Température moyenne : 7.9 °C. Terrain estimé : probablement bon (estimation à partir de la pluie, non validée ; l&#x27;état officiel de la piste n&#x27;est pas accessible). <span class='tag info'>contexte</span></li><li><strong>Qui le monte</strong> : Drivers classés au top 20 ELO (instantané du 4 novembre 2026) : n°5 EVERY TIME WINNER : E. RAFFIN (ELO 1814, 3e du classement) ; n°16 ZOOM DIAMANT : M. ABRIVARD (ELO 1747, 8e du classement) ; n°1 KOTKIE : P.PH. PLOQUIN (ELO 1737, 10e du classement) ; n°15 COMPETIVO : B. ROCHARD (ELO 1752, 6e du classement) ; n°10 DIE HARD (ITY) : THEO DUVALDESTIN (ELO 1891, 1e du classement) ; n°8 HINDEN : A. BARRIER (ELO 1705, 17e du classement) ; n°2 ISIS D&#x27;HERFRAIE : D. THOMAIN (ELO 1702, 20e du classement) <span class='tag info'>contexte</span></li><li><strong>Premiers déferrages</strong> : n° 7 : premier déferrage de leur fiche (Turfin : effet positif observé, non validé sur nos données). <span class='tag info'>contexte</span></li><li><strong>Difficulté principale</strong> : Le 1er et le 2e sont à 13.8 points d&#x27;écart : un favori se détache. <span class='tag ok'>mesuré</span></li></ol>
+  <ol class='profil'><li><strong>Type de course</strong> : Attelé, 2100 m (distance intermédiaire). <span class='tag ok'>mesuré</span></li><li><strong>Taille du peloton</strong> : 17 partants : grand peloton. Contexte Turfin : le favori gagne 44 % en peloton de 8 ou moins, 20 % à 16 partants et plus. <span class='tag info'>contexte</span></li><li><strong>Poids</strong> : Pas de poids au trot : le handicap ne joue pas dans cette course. <span class='tag ok'>mesuré</span></li><li><strong>Météo et terrain</strong> : Météo non disponible pour cet hippodrome. <span class='tag info'>contexte</span></li><li><strong>Qui le monte</strong> : Drivers classés au top 20 ELO (instantané du 4 novembre 2026) : n°5 EVERY TIME WINNER : E. RAFFIN (ELO 1814, 3e du classement) ; n°16 ZOOM DIAMANT : M. ABRIVARD (ELO 1747, 8e du classement) ; n°1 KOTKIE : P.PH. PLOQUIN (ELO 1737, 10e du classement) ; n°15 COMPETIVO : B. ROCHARD (ELO 1752, 6e du classement) ; n°10 DIE HARD (ITY) : THEO DUVALDESTIN (ELO 1891, 1e du classement) ; n°8 HINDEN : A. BARRIER (ELO 1705, 17e du classement) ; n°2 ISIS D&#x27;HERFRAIE : D. THOMAIN (ELO 1702, 20e du classement) <span class='tag info'>contexte</span></li><li><strong>Premiers déferrages</strong> : n° 7 : premier déferrage de leur fiche (Turfin : effet positif observé, non validé sur nos données). <span class='tag info'>contexte</span></li><li><strong>Difficulté principale</strong> : Le 1er et le 2e sont à 13.8 points d&#x27;écart : un favori se détache. <span class='tag ok'>mesuré</span></li></ol>
 </section>
 <section id="zone-7" class="card accent-bleu">
   <div class="label">7 · Analyse détaillée par cheval</div>
@@ -166,4 +175,4 @@ details li{margin-bottom:6px}
 
 
 <p class="foot">Les cotes ne sont pas utilisées. Estimations, pas des garanties. Jouer comporte des risques : jeu responsable, interdit aux mineurs.</p>
-</main></body></html>
+</div></div></main></body></html>
