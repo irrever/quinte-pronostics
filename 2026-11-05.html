@@ -9,38 +9,38 @@
   --vert:#1f7a4d;--vert-bg:#dcf5e7;--violet:#6b3fd1;--violet-bg:#eee8ff;
   --rouge:#b3261e;--rouge-bg:#fde7e5;--gris:#7a8496;--gris-bg:#eef1f6;}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#0f1219;--surface:#171c27;--line:#2a3142;--text:#eef1f7;--muted:#9aa5b8;
-  --or:#f3c14a;--or-bg:#3a2d0d;--bleu:#8fb4ff;--bleu-bg:#18284a;
-  --vert:#6fd39a;--vert-bg:#15332a;--violet:#c3a8ff;--violet-bg:#2a1f4a;
-  --rouge:#ff8a80;--rouge-bg:#3d1b19;--gris:#9aa5b8;--gris-bg:#222a3a;}}
+  --bg:#0e131b;--surface:#151c27;--line:#263041;--text:#e6eaf1;--muted:#9aa4b4;
+  --or:#c8a96a;--or-bg:#2a2317;--bleu:#9fb8dc;--bleu-bg:#18233a;
+  --vert:#8cc7a6;--vert-bg:#15261d;--violet:#b3bccd;--violet-bg:#1d2431;
+  --rouge:#e3948d;--rouge-bg:#33201e;--gris:#9aa4b4;--gris-bg:#1d2431;}}
 :root[data-theme="dark"]{
-  --bg:#0f1219;--surface:#171c27;--line:#2a3142;--text:#eef1f7;--muted:#9aa5b8;
-  --or:#f3c14a;--or-bg:#3a2d0d;--bleu:#8fb4ff;--bleu-bg:#18284a;
-  --vert:#6fd39a;--vert-bg:#15332a;--violet:#c3a8ff;--violet-bg:#2a1f4a;
-  --rouge:#ff8a80;--rouge-bg:#3d1b19;--gris:#9aa5b8;--gris-bg:#222a3a;}
+  --bg:#0e131b;--surface:#151c27;--line:#263041;--text:#e6eaf1;--muted:#9aa4b4;
+  --or:#c8a96a;--or-bg:#2a2317;--bleu:#9fb8dc;--bleu-bg:#18233a;
+  --vert:#8cc7a6;--vert-bg:#15261d;--violet:#b3bccd;--violet-bg:#1d2431;
+  --rouge:#e3948d;--rouge-bg:#33201e;--gris:#9aa4b4;--gris-bg:#1d2431;}
 body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;
   padding:0 max(16px,env(safe-area-inset-right,0px)) 40px max(16px,env(safe-area-inset-left,0px))}
 main{max-width:960px;margin:0 auto;padding-top:20px}
-.hero{background:linear-gradient(120deg,var(--bleu),var(--violet));color:#fff;border-radius:16px;padding:20px;margin-bottom:18px}
+.hero{background:#1f3a5f;color:#f2f4f8;border-radius:10px;padding:20px 22px;margin-bottom:18px;border:1px solid #16294a}
 .hero h1{font-size:22px;margin:0 0 6px}
 .hero p{margin:0;opacity:.92}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
-.chip{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:2px 10px;font-size:13px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:16px}
-.card.accent-or{border-left:5px solid var(--or)}
-.card.accent-bleu{border-left:5px solid var(--bleu)}
-.card.accent-vert{border-left:5px solid var(--vert)}
-.card.accent-violet{border-left:5px solid var(--violet)}
-.card.accent-gris{border-left:5px solid var(--gris)}
+.chip{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:4px;padding:2px 9px;font-size:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px;margin-bottom:14px}
+.card.accent-or{border-left:3px solid var(--or)}
+.card.accent-bleu{border-left:3px solid var(--bleu)}
+.card.accent-vert{border-left:3px solid var(--vert)}
+.card.accent-violet{border-left:3px solid var(--violet)}
+.card.accent-gris{border-left:3px solid var(--gris)}
 h2{font-size:17px;margin:0 0 10px}
 .label{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:700}
 .ordre{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
-.pastille{min-width:44px;height:44px;padding:0 10px;display:inline-flex;align-items:center;justify-content:center;border-radius:12px;font-weight:800;font-size:17px;color:#fff;background:var(--bleu)}
+.pastille{min-width:44px;height:44px;padding:0 10px;display:inline-flex;align-items:center;justify-content:center;border-radius:6px;font-weight:700;font-size:16px;color:#fff;background:var(--bleu)}
 .pastille.r1{background:var(--or)}
 .pastille.r2{background:var(--vert)}
 .pastille.box{background:var(--violet)}
 .pastille.gris{background:var(--gris)}
-.jeu-titre{font-size:20px;font-weight:800;color:var(--vert)}
+.jeu-titre{font-size:19px;font-weight:700;color:var(--text)}
 .note{color:var(--muted);font-size:13px;margin:6px 0}
 .wrap{overflow-x:auto}
 table{width:100%;border-collapse:collapse;font-size:14px}
@@ -66,7 +66,7 @@ details li{margin-bottom:6px}
 .rec{display:grid;grid-template-columns:1fr;gap:12px}
 @media (min-width:640px){.rec{grid-template-columns:repeat(3,1fr)}}
 .rec .bloc{border:1px solid var(--line);border-radius:12px;padding:12px;background:var(--surface)}
-.rec .bloc.reco{border:2px solid var(--vert);background:var(--vert-bg)}
+.rec .bloc.reco{border:1px solid var(--bleu);background:var(--bleu-bg)}
 .rec .gros{font-size:22px;font-weight:800}
 .foot{color:var(--muted);font-size:12px;margin-top:8px}
 .profil{padding-left:22px;margin:0}.profil li{margin-bottom:10px}
@@ -82,6 +82,12 @@ details li{margin-bottom:6px}
   <h2>Profil de la course et difficultés</h2>
   <p class="note">Ces éléments sont propres à cette course. « Mesuré » vient des données du jour ; « contexte » est une information de référence, non intégrée au calcul.</p>
   <ol class='profil'><li><strong>Type de course</strong> : Attelé, 2100 m (distance intermédiaire). <span class='tag ok'>mesuré</span></li><li><strong>Taille du peloton</strong> : 17 partants : grand peloton. Contexte Turfin : le favori gagne 44 % en peloton de 8 ou moins, 20 % à 16 partants et plus. <span class='tag info'>contexte</span></li><li><strong>Poids</strong> : Pas de poids au trot : le handicap ne joue pas dans cette course. <span class='tag ok'>mesuré</span></li><li><strong>Météo et terrain</strong> : Pluie : 0.9 mm sur 7 jours, 0.3 mm sur 48 h, 0.0 mm prévus le jour de la course. Vent max : 10.2 km/h. Température moyenne : 7.9 °C. Terrain estimé : probablement bon (estimation à partir de la pluie, non validée ; l&#x27;état officiel de la piste n&#x27;est pas accessible). <span class='tag info'>contexte</span></li><li><strong>Qui le monte</strong> : Drivers classés au top 20 ELO (instantané du 4 novembre 2026) : n°5 EVERY TIME WINNER : E. RAFFIN (ELO 1814, 3e du classement) ; n°16 ZOOM DIAMANT : M. ABRIVARD (ELO 1747, 8e du classement) ; n°1 KOTKIE : P.PH. PLOQUIN (ELO 1737, 10e du classement) ; n°15 COMPETIVO : B. ROCHARD (ELO 1752, 6e du classement) ; n°10 DIE HARD (ITY) : THEO DUVALDESTIN (ELO 1891, 1e du classement) ; n°8 HINDEN : A. BARRIER (ELO 1705, 17e du classement) ; n°2 ISIS D&#x27;HERFRAIE : D. THOMAIN (ELO 1702, 20e du classement) <span class='tag info'>contexte</span></li><li><strong>Premiers déferrages</strong> : n° 7 : premier déferrage de leur fiche (Turfin : effet positif observé, non validé sur nos données). <span class='tag info'>contexte</span></li><li><strong>Difficulté principale</strong> : Le 1er et le 2e sont à 13.8 points d&#x27;écart : un favori se détache. <span class='tag ok'>mesuré</span></li></ol>
+</section>
+
+<section class="card accent-bleu">
+  <div class="label">Distinction</div>
+  <h2>Distinction du gagnant et du top 5</h2>
+  <div class='wrap'><table><thead><tr><th>Rang</th><th class='num'>N°</th><th>Cheval</th><th class='num'>Gagner</th><th class='num'>Top 5</th><th class='num'>Écart avec le suivant</th><th>Position</th></tr></thead><tbody><tr><td>1</td><td class='num'>6</td><td>HUMANITY PELLINI</td><td class='num'>15.7 %</td><td class='num'>63.1 %</td><td class='num'>13.8 pts</td><td><span class='tag info'>Top 5</span></td></tr><tr><td>2</td><td class='num'>4</td><td>JOKER DES CHALIERS</td><td class='num'>9.0 %</td><td class='num'>43.4 %</td><td class='num'>2.4 pts</td><td><span class='tag info'>Top 5</span></td></tr><tr><td>3</td><td class='num'>5</td><td>EVERY TIME WINNER</td><td class='num'>8.3 %</td><td class='num'>40.3 %</td><td class='num'>1.0 pts</td><td><span class='tag info'>Top 5 · groupe serré</span></td></tr><tr><td>4</td><td class='num'>9</td><td>READY STAR</td><td class='num'>8.0 %</td><td class='num'>39.1 %</td><td class='num'>1.5 pts</td><td><span class='tag info'>Top 5 · groupe serré</span></td></tr><tr><td>5</td><td class='num'>12</td><td>KAXIG IN</td><td class='num'>7.4 %</td><td class='num'>37.2 %</td><td class='num'>0.9 pts</td><td><span class='tag info'>Top 5 · groupe serré</span></td></tr><tr><td>6</td><td class='num'>17</td><td>NIAGARA RIVER</td><td class='num'>7.1 %</td><td class='num'>36.3 %</td><td class='num'>8.4 pts</td><td><span class='tag '>Hors top 5</span></td></tr><tr><td>7</td><td class='num'>14</td><td>KNOCKONWOOD</td><td class='num'>5.1 %</td><td class='num'>27.2 %</td><td class='num'>0.7 pts</td><td><span class='tag '>Hors top 5</span></td></tr><tr><td>8</td><td class='num'>7</td><td>JUSSEO</td><td class='num'>5.0 %</td><td class='num'>26.3 %</td><td class='num'>0.5 pts</td><td><span class='tag '>Hors top 5</span></td></tr></tbody></table></div><p class='note'>Un écart inférieur à 2 points signale deux chevaux que le modèle ne sépare pas. Dans ce cas, l'ordre entre eux est peu fiable.</p>
 </section>
 
 <section class="card accent-or">
