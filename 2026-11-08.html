@@ -188,6 +188,55 @@ td,th{padding:8px 6px}
 .rech-resultat th.n,.rech-resultat td.n{text-align:right;font-variant-numeric:tabular-nums}
 .rech-bouton{font:inherit;font-size:14px;font-weight:600;padding:9px 16px;border:1px solid var(--bleu);background:var(--bleu);color:#ffffff;border-radius:6px;cursor:pointer;align-self:flex-end}
 .rech-arrivee{font-size:15px;font-weight:600;margin:8px 0 2px}
+.vigilance-liste, .modele-liste { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; font-size: 14px; }
+.modele-liste { list-style: none; padding-left: 0; }
+.modele-liste li { display: grid; grid-template-columns: 26px minmax(0, 1fr) auto; gap: 10px; align-items: center; }
+.vigilance-groupe { display: grid; gap: 6px; margin-top: 12px; }
+.tag.alerte-rouge { color: var(--rouge); background: var(--rouge-bg); }
+.tag.alerte-gris { color: var(--gris); background: var(--gris-bg); }
+/* Refonte reprise de la maquette : palette sarcelle, titres en serif, cartes arrondies, mode sombre */
+:root{color-scheme:light;
+  --bg:#f5f4ef;--surface:#ffffff;--line:#e2e0d8;--text:#1c1f24;--muted:#5f656d;
+  --or:#0d6a5b;--or-bg:#d6ebe5;--bleu:#0d6a5b;--bleu-bg:#d6ebe5;
+  --vert:#0d6a5b;--vert-bg:#d6ebe5;--violet:#0d6a5b;--violet-bg:#d6ebe5;
+  --rouge:#9a4a00;--rouge-bg:#f8e6d2;--gris:#5f656d;--gris-bg:#ebe9e2;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){color-scheme:dark;
+  --bg:#14161a;--surface:#1c1f24;--line:#2d3238;--text:#ececea;--muted:#a3a9b1;
+  --or:#6fd6bf;--or-bg:#1d3a34;--bleu:#6fd6bf;--bleu-bg:#1d3a34;
+  --vert:#6fd6bf;--vert-bg:#1d3a34;--violet:#6fd6bf;--violet-bg:#1d3a34;
+  --rouge:#f2b36b;--rouge-bg:#3a2a1a;--gris:#a3a9b1;--gris-bg:#2a2e34;}}
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#14161a;--surface:#1c1f24;--line:#2d3238;--text:#ececea;--muted:#a3a9b1;
+  --or:#6fd6bf;--or-bg:#1d3a34;--bleu:#6fd6bf;--bleu-bg:#1d3a34;
+  --vert:#6fd6bf;--vert-bg:#1d3a34;--violet:#6fd6bf;--violet-bg:#1d3a34;
+  --rouge:#f2b36b;--rouge-bg:#3a2a1a;--gris:#a3a9b1;--gris-bg:#2a2e34;}
+h1{font-family:ui-serif,Georgia,"Times New Roman",serif;font-size:26px;font-weight:600;line-height:1.2;letter-spacing:0;text-wrap:balance}
+h2{font-family:ui-serif,Georgia,"Times New Roman",serif;font-size:20px;font-weight:600;line-height:1.25;letter-spacing:0;margin:0 0 8px;text-wrap:balance}
+.hero h1{font-size:24px}
+.entete h2{font-size:22px;font-weight:600;margin:2px 0 10px}
+.card{border-radius:14px;padding:16px;box-shadow:none;border:1px solid var(--line)}
+.card.accent-bleu,.card.accent-or,.card.accent-gris,.card.accent-violet,.card.accent-vert,.hero{border-left:1px solid var(--line)}
+.label{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.badge{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--bleu);background:var(--bleu-bg);border-radius:6px;padding:3px 8px;margin:0 0 6px}
+.badge.gris{color:var(--muted);background:var(--gris-bg)}
+.badge.alerte{color:var(--rouge);background:var(--rouge-bg)}
+.sous{margin:2px 0 8px;font-size:14px;color:var(--muted)}
+.puces span{border-radius:999px;background:transparent;color:var(--muted);font-size:12.5px;padding:3px 10px}
+.tag{border-radius:6px;padding:2px 8px;font-size:12px;font-weight:600;letter-spacing:.01em}
+.onglets button{border-radius:8px}
+.barre{height:8px;border-radius:999px;background:var(--gris-bg);min-width:0}
+.barre span{background:var(--bleu)}
+.final-liste,.modele-liste{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:10px}
+.final-liste li{display:grid;grid-template-columns:24px minmax(0,1fr) minmax(0,40%);align-items:center;gap:10px}
+.modele-liste li{display:grid;grid-template-columns:24px minmax(0,1fr) auto;align-items:center;gap:10px}
+.rang{font-variant-numeric:tabular-nums;color:var(--muted)}
+.nom{min-width:0;overflow-wrap:anywhere}
+.nom small{display:block;font-size:12.5px;color:var(--muted)}
+.mesure{display:grid;gap:4px;justify-items:end;min-width:0;font-variant-numeric:tabular-nums}
+.mesure .barre{width:100%}
+.ecarts{margin:8px 0 0;padding-left:18px;display:grid;gap:8px;font-size:14px}
+.vigilance-groupe{display:grid;gap:6px;margin-top:12px}
+.formule{margin:0;font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:10px}
 </style></head><body><main><div class="layout"><nav class="side" aria-label="Sections"><div class="grp">Pronostic</div><a href="#zone-1">Quinté+</a><div class="grp">Analyse</div><a href="#zone-2">Analyse des chevaux</a><a href="#zone-6">Probabilités</a><div class="grp">Jeux</div><a href="#zone-3">Tiercé, quarté, quinté</a><a href="#zone-3-1">Box</a><a href="#zone-4">Couplés et simples</a><a href="#zone-5">Distinction top 5</a><div class="grp">Détail</div><a href="#zone-7">Profil de course</a><div class="grp">Suivi</div><a href="#zone-8-1">Méthode</a><a href="#zone-9">Statistiques</a></nav><div class="contenu">
 
 <section class='card entete accent-bleu'><div class='label'>Quinté+ du jour · R1 C5</div><h2>SAINT-CLOUD · SAGARO</h2><div class='puces'><span>Dimanche 8 novembre 2026</span><span>Départ 15:15</span><span>3100 m</span><span>Plat</span><span>15 partants</span><span>corde à gauche</span><span>Pronostic figé le jour même à 09 h 10, sans les cotes</span></div></section>
